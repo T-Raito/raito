@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JS練習用</title>
+  </head>
+
+  <body>
+    <script>
+      const datas = [
+        {
+          id: 1,
+          name: "taro",
+          age: 25,
+          class: "さくら",
+        },
+        {
+          id: 2,
+          name: "hanako",
+          age: 17,
+          class: "うめ",
+        },
+        {
+          id: 3,
+          name: "ichiro",
+          age: 20,
+          class: "きく",
+        },
+      ];
+      console.log(datas);
+      // 課題１　dataから取得した値:ichiroは、20歳です！
+      // 課題２　成人しているのはtaroとichiroです！
+      let i = 0;
+      let a = 0;
+      let x = datas.length - 1;
+      const people = [];
+      while (i <= x) {
+        if (datas[i].name == "ichiro") {
+          console.log(
+            "dataから取得した値:ichiroは、" + datas[i].age + "歳です！"
+          );
+        }
+        if (datas[i].age >= 20) {
+          // people[a]=datas[i].name;
+          people.push(datas[i].name);
+          // console.log(people[a]);
+          a = a + 1;
+        }
+        i++;
+      }
+      // 解答
+      if (datas.name.map == "ichiro") {
+        console.log($datas.age);
+      }
+
+      // console.log(people);
+      i = 0;
+      let y = people.length - 1;
+      let answer = "成人しているのは";
+      while (i <= y) {
+        if (i == y) {
+          answer = answer + people[i] + "です!";
+        } else {
+          answer = answer + people[i] + "と";
+        }
+        i = i + 1;
+      }
+      console.log(answer);
+
+      // 質問内容
+      // process.stdout.write(answer);
+
+      // 乱数
+      const mikuji = ["大吉", "中吉", "小吉", "吉", "凶"];
+      const rnd = Math.floor(Math.random() * mikuji.length);
+      console.log(mikuji[rnd]);
+    </script>
+  </body>
+</html>

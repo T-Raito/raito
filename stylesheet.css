@@ -1,83 +1,104 @@
 @charset "utf-8";
 
-body{
-    text-size-adjust: 100%;
-    overflow-x: hidden;
-    color: rgb(0, 0, 0);
-    font: 300 14px / 1.9 "Noto Sans JP", Arial, Verdana, 游ゴシック, YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", メイリオ, Meiryo, sans-serif;
-    background: rgb(218, 218, 218);
+body {
+  text-size-adjust: 100%;
+  overflow-x: hidden;
+  color: rgb(0, 0, 0);
+  font: 300 14px / 1.9 "Noto Sans JP", Arial, Verdana, 游ゴシック, YuGothic,
+    "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", メイリオ, Meiryo,
+    sans-serif;
+  background: rgb(218, 218, 218);
 }
 /* コロンの削除 */
-ul,li{
-    list-style: none;
+ul,
+li {
+  list-style: none;
 }
 
 /* -------------------- wrapper -------------------- */
-#wrapper{
-    display: flex;
-    justify-content: space-between;
+#wrapper {
+  display: flex;
+  justify-content: space-between;
 }
-article{
-    width: 80%;
-    /* background-color:tomato; */
+article {
+  width: 80%;
+  /* background-color:tomato; */
 }
-aside{
-    width: 20%;
+aside {
+  width: 20%;
 }
 /* -------------------- モバイル版wrapper -------------------- */
-@media (max-width:400px){
-    #wrapper{
-        display: flex;
-        flex-direction: column-reverse;
-        margin: 0px;
-    }
-    article{
-        width: 100%;
-    }
-    aside{
-        width: 100%;
-    }
+@media (max-width: 400px) {
+  #wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+    margin: 0px;
+  }
+  article {
+    width: 100%;
+  }
+  aside {
+    width: 100%;
+  }
 }
 
 /* -------------------- header -------------------- */
-.mainImg{
-    width: 100%;
-    height: auto;
+.header {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.mainImg {
+  width: 100%;
+  height: 100%;
+}
+.mobileheader {
+  padding-left: auto;
+  padding-right: auto;
+  /* background-color: tomato; */
+}
+@media (max-width: 400px) {
+  .mainImg {
+    margin-top: 50px;
+  }
 }
 
 /* 題名のフォント */
-h2{
-    font-family: 'Modern Antiqua', 'Noto Sans JP',serif;
-    text-align: center;
-    width: 60%;
-    margin: 70px auto;
-    font-size: 22px;
-    font-weight: normal;
+h2 {
+  font-family: "Modern Antiqua", "Noto Sans JP", serif;
+  text-align: center;
+  width: 60%;
+  margin: 70px auto;
+  font-size: 22px;
+  font-weight: normal;
 }
-h2 span{
-    padding-bottom: 20px;
-    border-bottom: 3px solid #000;
+h2 span {
+  padding-bottom: 20px;
+  border-bottom: 3px solid #000;
 }
 
 /* MASSAGE */
-.massage {
-    width: 60%;
-    margin: 0 auto;
-    padding-bottom: 80px;
+.message {
+  width: 80%;
+  margin: 0 auto;
+  padding-bottom: 80px;
 }
 /* モバイル版MASSAGE */
-@media (max-width:400px){
-    .massage {
-        width: 100%;
-        margin: 0 auto;
-        padding-bottom: 80px;
-    }
+@media (max-width: 400px) {
+  .message {
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 80px;
+  }
 }
 /* photoのフォント */
-.photoarea{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 0px;
+.photoarea {
+  width: 80%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* .photoarea img{
@@ -85,292 +106,290 @@ h2 span{
     height:350px;
 } */
 
-.photoitem{
-    top: 0;
-    display: block;
-    width: 100%;
-    height: auto;
+.photoitem {
+  top: 0;
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
-.photomain{
-    top: 0;
-    width: 100%;
-    height: auto;
+.photomain {
+  top: 0;
+  width: 100%;
+  height: auto;
 }
 
 /* モバイル版photoareaのフォント */
-@media (max-width:400px){
-    .photoarea{
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 0px;
-    }
+@media (max-width: 400px) {
+  .photoarea {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0px;
+  }
 }
 
 /* brandのフォント */
-#BRAND{
-    width: 80%;
-    margin: 0 ;
-    padding-bottom: 50px;
-    border-bottom: 1px solid #a0a0a0;
+#BRAND {
+  width: 80%;
+  padding-left: 0px;
+  padding-bottom: 50px;
+  border-bottom: 1px solid #a0a0a0;
+  margin-right: auto;
+  margin-left: auto;
 }
 
-#BRAND .brandlist ul{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 20px; 
+#BRAND .brandlist ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding-left: 0px;
 }
 
-.logo{
-    width: 100%;
-    height: auto;
+.logo {
+  width: 100%;
+  height: auto;
 }
 
-#BRAND li{
-    display: inline-block;
-    padding: 0 10%;
-    vertical-align: top;
-    text-align: center; 
+#BRAND li {
+  display: inline-block;
+  padding: 0 10%;
+  vertical-align: top;
+  text-align: center;
 }
-
-/* #BRAND li p{
-    display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-} */
 
 /* モバイル版brandのフォント */
 /* どうしても中心にならない */
-@media (max-width:400px){
-    #BRAND{
-        width: 100%;
-        background-color: tomato;
-    }
- 
-    #BRAND .brandlist ul{
-        display: grid;
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-    .brandlist .logo{
-        width: 60%;
-        height: auto;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .brandlist p{
-        text-align: center;
-    }
+@media (max-width: 400px) {
+  #BRAND {
+    width: 100%;
+  }
+
+  #BRAND .brandlist ul {
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .brandlist .logo {
+    width: 80%;
+    height: auto;
+    margin-left: 0px;
+    padding-left: 0px;
+  }
+  .brandlist p {
+    text-align: center;
+  }
 }
 
 /* projectのフォント */
-#PROJECT{
-    width: 80%;
-    margin: 0 auto;
-    padding-bottom: 50px;
-    border-bottom: 1px solid #a0a0a0 
+#PROJECT {
+  width: 80%;
+  margin: 0 auto;
+  padding-bottom: 50px;
+  border-bottom: 1px solid #a0a0a0;
 }
 
-.projectlist{
-    clear: both;
-    padding-bottom: 50px;
+.projectlist {
+  clear: both;
+  padding-bottom: 50px;
 }
 
-.left{
-    float: left;
-    /* width: 60%; */
-    height: auto;
-    margin: 5px 20px 5px;
+.left {
+  float: left;
+  /* width: 60%; */
+  height: auto;
+  margin: 5px 20px 5px;
 }
 /* モバイル版projectのフォント */
-@media (max-width:400px){
-    .projectlist{
-        clear: none;
-        padding-bottom: 50px;
-    }
-    .projectlist img{
-        width: 100%;
-        height: auto;
-    }
-    .left{
-        margin-left: auto;
-        margin-right: auto;
-    }
-}ß
+@media (max-width: 400px) {
+  .projectlist {
+    clear: none;
+    padding-bottom: 50px;
+  }
+  .projectlist img {
+    width: 100%;
+    height: auto;
+  }
+  .left {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+ß
 
 
 /* companyのフォント */
-/* 質問：会社情報の行の開始場所が地図とズレる */
-#COMPANY{
-    width: 80%;
-    margin: 0 auto;
-    padding-bottom: 50px;
+#COMPANY {
+  width: 80%;
+  margin: 0 auto;
 }
-/* .companyinformation{
-    margin: 0;
-} */
-.companyinformation ul{
-    display: grid;
-    grid-template-columns: 2fr 3fr ; 
+#company {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0px;
 }
-#map{
-    width: 100%;
-    height: 100%;
-    padding: 0px;
+.companyinformation {
+  width: 80%;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 50px;
 }
-iframe{
-    width: 100%;
+
+#map {
+  width: 80%;
+  height: 50%;
 }
 
 /* モバイル版companyのフォント */
-@media (max-width:400px){
-    .companyinformation ul{
-        display: grid;
-        grid-template-columns: 1fr; 
-    }
-    #map{
-        width: 100%;
-        height: auto;
-        margin-left: auto;
-        margin-right: auto;
-    }
+@media (max-width: 400px) {
+  #company {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .companyinformation {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  #map {
+    width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 /* footerのフォント */
-#footer{
-    text-align: center;
+#footer {
+  text-align: center;
 }
 
 /* -------------------- sidebar -------------------- */
 
 #sidebar {
-    top: 0;
-    width: 80%;
-    height: 100%;
-    position: fixed;
-    background: #dadada;
-    font-family: 'Modern Antiqua', 'Noto Sans JP',serif;
+  top: 0;
+  width: 80%;
+  height: 100%;
+  position: fixed;
+  background: #dadada;
+  font-family: "Modern Antiqua", "Noto Sans JP", serif;
 }
-#sidebar .header{
-    margin-top: 40px;
+#sidebar .header {
+  margin-top: 40px;
 }
-#sidebar img{
-    padding-bottom: 40px;
-}
-
-#sidebar .nav__menu li{
-    margin-bottom: 30px;
+#sidebar img {
+  padding-bottom: 40px;
 }
 
-#snslinks ul{
-    display: flex;
-    justify-content: flex-start;
+#sidebar .nav__menu li {
+  margin-bottom: 30px;
+}
+
+#snslinks ul {
+  display: flex;
+  justify-content: flex-start;
 }
 
 #snslinks li {
-    display: inline-block;
-    padding-right: 10px;
+  display: inline-block;
+  padding-right: 10px;
 }
 
 .nav__toggle {
-    display: none;
-  }
-
-@media (max-width:400px){
-    #sidebar {
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 60px;
-        position: fixed;
-        background:　#dadada;
-        font-family: 'Modern Antiqua', 'Noto Sans JP',serif;
-    }
-    #sidebar .header{
-        margin-top: 10px;
-        
-    }
-    #sidebar img{
-        padding-bottom: 0px;
-    }
-    #sidebar .header #logotop{
-        margin-left: 100px;
-        margin-right: 100px;
-    }
-
-    #sidebar .nav__menu ul li{
-        margin-bottom: 30px;
-        border-bottom: 1px solid #ccc;
-    }
-
-    .nav__menu {
-        left: 0px;
-        width: 100%;
-        height: 400px;
-        position: absolute;
-        z-index: -1;
-        visibility: hidden;
-        opacity: 0;
-        transform: translateY(-0%);
-        transition: transform 0.3s ease-out, opacity 0.3s ease-out;
-        background: #dadada; 
-    }
-
-    .nav__menu.active {
-        top: 50px;
-        z-index: 1;
-        visibility: visible;
-        opacity: 1;
-        transform: translateY(0); 
-        color: #dadada;
-    }
-
-    .nav__toggle {
-        display: block;
-        position: absolute;
-        right: 1rem;
-        top: 1rem; 
-        width: 30px;
-        height: 30px;
-        /* background-color: tomato; */
-    }
-
-    .nav__toggle span {
-        display: block;
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        margin-left: 0px;
-        width: 27px; 
-        height: 5px;   
-        /* border-bottom: solid 3px #333;  */
-        background-color: violet;
-        margin-bottom: 10px;
-        transition: 0.2s ease;
-    }
-    .nav__toggle span:nth-child(1) {
-        top:0px;
-    }
-    .nav__toggle span:nth-child(2) {
-        top: 10px;
-    }
-    .nav__toggle span:nth-child(3) {
-        top: 20px;
-    }
-
-    .nav__toggle.active span:nth-child(1) {
-        top: 10px;
-        transform: rotate(-45deg);
-    }
-     
-    /* 2番目と3番目のspanを45度に */
-    .nav__toggle.active span:nth-child(2),
-    .nav__toggle.active span:nth-child(3) {
-        top: 10px;
-        transform: rotate(45deg);
-    }
-    
+  display: none;
 }
 
+@media (max-width: 400px) {
+  #sidebar {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    background: #dadada;
+    font-family: "Modern Antiqua", "Noto Sans JP", serif;
+  }
+  #sidebar .header {
+    margin-top: 10px;
+  }
+  #sidebar img {
+    padding-bottom: 0px;
+  }
+  #sidebar .header #logotop {
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+
+  #sidebar .nav__menu ul li {
+    margin-bottom: 30px;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .nav__menu {
+    left: 0px;
+    width: 100%;
+    height: 400px;
+    position: absolute;
+    z-index: -1;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-0%);
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+    background: #dadada;
+  }
+
+  .nav__menu.active {
+    top: 50px;
+    z-index: 1;
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+    color: #dadada;
+  }
+
+  .nav__toggle {
+    display: block;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    width: 30px;
+    height: 30px;
+    background-color: #dadada;
+    border: none;
+  }
+
+  .nav__toggle span {
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20px;
+    height: 2px;
+    background-color: black;
+    margin-bottom: 10px;
+    transition: 0.2s ease;
+  }
+  .nav__toggle span:nth-child(1) {
+    top: 0px;
+  }
+  .nav__toggle span:nth-child(2) {
+    top: 10px;
+  }
+  .nav__toggle span:nth-child(3) {
+    top: 20px;
+  }
+
+  .nav__toggle.active span:nth-child(1) {
+    top: 10px;
+    transform: rotate(-45deg);
+  }
+
+  /* 2番目と3番目のspanを45度に */
+  .nav__toggle.active span:nth-child(2),
+  .nav__toggle.active span:nth-child(3) {
+    top: 10px;
+    transform: rotate(45deg);
+  }
+}
